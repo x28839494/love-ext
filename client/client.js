@@ -2,7 +2,7 @@ import { io } from "socket.io-client"
 let $ = (el)=> {
     return document.querySelector(el)
 }
-let socket = io.connect();
+let socket = io.connect("https://chrome-ext.vercel.app/");
 let $form = $("#messForm");
 let $name = $("#name");
 let $textarea = $("#message");
