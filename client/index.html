@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <style>
+      .animation {
+        animation-name: cssAnimation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        display: inline-block;
+
+      }
+
+      @keyframes cssAnimation {
+        0% {
+          transform: scale(1);
+        }
+        15% {
+          transform: scale(2);
+        }
+        30% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(2);
+        }
+        60% {
+          transform: scale(1);
+        }
+        80% {
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(1);
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <div class="heart">❤️</div>
+        <p class="lead">Укажите ваше имя и начинайте переписку</p>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h3>Форма сообщений</h3>
+          <form id="messForm">
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите имя"
+              class="form-control"
+            />
+            <br />
+            <label for="message">Сообщение</label>
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              placeholder="Введите сообщение"
+            ></textarea>
+            <br />
+            <input type="submit" value="Отправить" class="btn btn-danger" />
+          </form>
+        </div>
+        <div class="col-6">
+          <h3>Сообщения</h3>
+          <div id="all_mess"></div>
+        </div>
+      </div>
+    </div>
+
+   <script src="/bundle.js"></script>
+
+
+  </body>
+</html>
